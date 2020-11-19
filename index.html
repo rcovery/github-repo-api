@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Github Repository API</title>
+        <link type="text/css" rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js"></script>
+    </head>
+    <body>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <center>
+            <h1>How to use?</h1><br>
+            <p>Download the <a id="span" href="download/script.js">script.js</a></p>
+            <br>
+            <p>Link the script:</p><br>
+
+            <pre><code class="html">
+&#60;script src="script.js">&#60;/script>
+            </code></pre><br>
+
+            <p>Create a root element with an id attribute. Specify the id value and place it in the parameter of the getParameter function along with a username:</p><br>
+
+            <pre><code class="html">
+&#60;div id="rootElementID">&#60;/div>
+&#60;script>getRepository("yourUsername", "rootElementID")&#60;/script>
+            </code></pre><br>
+
+            <p>In line 8 of <a id="span" href="download/script.js">script.js</a> edit <u>"dataReturn"</u> and insert your return. For example:</p><br>
+
+            <pre><code class="javascript" style="font-size: 20px;">
+let dataReturn = `&#60;a id="projectLink" href="${item.html_url}" target="_blank">&#60;div>
+&#60;span>Name: ${item.name}&#60;/span>
+&#60;p>${item.description}&#60;/p>
+&#60;/div>&#60;/a>`;
+            </code></pre>
+
+
+        </center>
+
+        <hr>
+
+        <h1 align="center"><u>Result:</u></h1><br>
+        <div id="projects"></div>
+        <script>getRepository("rcovery", "projects")</script>
+
+        <hr>
+
+        <div id="footer"><a target="_blank" href="https://rcovery.netlify.app">RCOVERY</a></div>
+    </body>
+</html>

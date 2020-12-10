@@ -9,8 +9,7 @@ function getRepository(username, rootElement){
                 <span>${item.name}</span>
                 <p>${item.description}</p>
                 </div></a>`;
-
-            console.log(item)
+            
             if (!item.fork){ // If it's not forked
                 document.getElementById(rootElement).innerHTML += dataReturn
             }      

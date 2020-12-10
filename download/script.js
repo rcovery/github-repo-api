@@ -7,7 +7,6 @@ function getRepository(username, rootElement){
 
             let dataReturn = `` // You can edit the data return, see all in https://developer.github.com/v3/repos/#response
 
-            console.log(item)
             if (!item.fork){ // If it's not forked
                 document.getElementById(rootElement).innerHTML += dataReturn
             }      
